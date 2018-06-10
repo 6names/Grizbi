@@ -754,7 +754,9 @@ a[class*="butn"]:hover {
         display: block;
         width: 100%;
         height: 58px;
-        background: url("../images/ui/brush-small-top.png") no-repeat 0 0;
+        background-image: url("../images/ui/brush-small-top.png");
+        background-position: 0 0;
+        background-repeat: no-repeat;
         background-size: 100% 100%; }
         .retina .benefits__item-image:before {
           background-image: url("../images/ui/brush-small-top@2x.png");
@@ -768,7 +770,9 @@ a[class*="butn"]:hover {
         display: block;
         width: 100%;
         height: 32px;
-        background: url("../images/ui/brush-small-bottom.png") no-repeat 0 0;
+        background-image: url("../images/ui/brush-small-bottom.png");
+        background-position: 0 0;
+        background-repeat: no-repeat;
         background-size: 100% 100%; }
         .retina .benefits__item-image:after {
           background-image: url("../images/ui/brush-small-bottom@2x.png");

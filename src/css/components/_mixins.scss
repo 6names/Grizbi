@@ -197,7 +197,9 @@
         width: 100%;
         height: 58px;
         //noinspection CssUnknownTarget
-        background: url('../images/ui/brush-small-top.png') no-repeat 0 0;
+        background-image: url('../images/ui/brush-small-top.png');
+        background-position: 0 0;
+        background-repeat: no-repeat;
         background-size: 100% 100%;
         
         .retina & {
@@ -217,7 +219,9 @@
         width: 100%;
         height: 32px;
         //noinspection CssUnknownTarget
-        background: url('../images/ui/brush-small-bottom.png') no-repeat 0 0;
+        background-image: url('../images/ui/brush-small-bottom.png');
+        background-position: 0 0;
+        background-repeat: no-repeat;
         background-size: 100% 100%;
         
         .retina & {

@@ -1,0 +1,85 @@
+.process {
+    z-index: 5;
+    @include blackBlock;
+    
+    &__inner {
+        @include inner();
+        z-index: 2;
+        padding-top: 253px;
+        padding-bottom: 50px;
+    }
+    
+    &__item {
+        background: $white;
+        color: $black;
+    
+        &-holder {
+            padding-top: 40px;
+            padding-right: 24px;
+            padding-bottom: 40px;
+            padding-left: 24px;
+        }
+        
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 145px;
+            height: 145px;
+            margin-bottom: 68px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 2px solid $borderLight;
+            border-radius: 50%;
+            
+            svg {
+                width: 80px;
+                height: 80px;
+                fill: $black;
+            }
+        }
+        
+        &-title {
+            margin-bottom: 16px;
+            font-family: $secondFont;
+            font-size: 30px;
+        }
+        
+        p {
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+    
+    @media only screen and (min-width: 1025px) {
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        &__item {
+            width: calc(50% - 15px);
+            margin-bottom: 40px;
+    
+            &-holder {
+                padding-top: 86px;
+                padding-right: 40px;
+                padding-left: 40px;
+            }
+        }
+    
+        .tns-ovh,
+        .tns-inner {
+            height: auto !important;
+            overflow: auto;
+        }
+    }
+    
+    @media only screen and (max-width: 1024px) {
+        &__inner {
+            padding-top: 100px;
+            padding-bottom: 50px;
+        }
+    }
+}

@@ -1,0 +1,64 @@
+//fonts
+//noinspection ALL
+@font-face {
+    font-family: 'Myriad Pro';
+    src: local('MyriadPro-Semibold'),
+    url('../fonts/MyriadPro-Semibold.woff2') format('woff2'),
+    url('../fonts/MyriadPro-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+//noinspection ALL
+@font-face {
+    font-family: 'Matias';
+    src: local('Matias'),
+    url('../fonts/Matias.woff2') format('woff2'),
+    url('../fonts/Matias.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+//noinspection ALL
+@font-face {
+    font-family: 'Myriad Pro';
+    src: local('Myriad Pro Light SemiExtended'), local('MyriadPro-LightSemiExt'),
+    url('../fonts/MyriadPro-LightSemiExt.woff2') format('woff2'),
+    url('../fonts/MyriadPro-LightSemiExt.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+//noinspection ALL
+@font-face {
+    font-family: 'Myriad Pro';
+    src: local('Myriad Pro SemiExtended'), local('MyriadPro-SemiExt'),
+    url('../fonts/MyriadPro-SemiExt.woff2') format('woff2'),
+    url('../fonts/MyriadPro-SemiExt.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+//variables
+$mainFont: 'Myriad Pro', Arial, Helvetica, sans-serif;
+$secondFont: 'Matias', Arial, Helvetica, sans-serif;
+
+$mainColor: #000000;
+$lightColor: rgba(255, 255, 255, 0.6);
+$placeHolder: #000000;
+
+$theme: #cc9e2e;
+
+$black: #000000;
+$white: #ffffff;
+$red: #de2c2c;
+$gray: #b3bfc1;
+$grayLight: #dee5e5;
+
+$inputBorder: #e5e5e5;
+$inputBorderFocus: #000000;
+$border: rgba(255, 255, 255, 0.1);
+$borderLight: #a3a3a3;
+
+$arrowLeftWhite: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAYAAAB24g05AAABS2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDAgNzkuMTYwNDUxLCAyMDE3LzA1LzA2LTAxOjA4OjIxICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+LUNEtwAAAHxJREFUKJGlkLENg0AMRV8okJKCjopMwxYpyCbZJhMwAEvQsgEpqNI+qpPQheLuYsmNrffkb1SirtW3+jjZ/fQZPKqL2uUKjvA9BT4KiuAgKIaD4GV5fS5qC0zAFXgCX9JrC6e06qxO6i03wl+SeJAtqaJMK9ADDTCkPGEHG07SRbP/Dx4AAAAASUVORK5CYII=') no-repeat;
+$arrowRightWhite: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAYAAAB24g05AAABS2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDAgNzkuMTYwNDUxLCAyMDE3LzA1LzA2LTAxOjA4OjIxICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIi8+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+LUNEtwAAAH5JREFUKJGd0LENg1AMRdELBQUFioSokoJZ2IIiq2SYiAkYgCXSZoOkp7y0CH7xjSVX1juyjUpGj+qkVsdZThj1rn7V+YjkAqiPFBIBkkgUOCGF+gdartWrUHvgFgjVwBtYgSG6fq0u6kftoj84hSNAMqxSZt79BBpgAH77wQZdZpaKWc0bigAAAABJRU5ErkJggg==') no-repeat;

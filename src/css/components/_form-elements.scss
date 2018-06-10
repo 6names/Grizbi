@@ -1,0 +1,99 @@
+input::-ms-clear {
+    display: none;
+}
+
+::-moz-placeholder {
+    color: $placeHolder;
+}
+
+:-ms-input-placeholder {
+    color: $placeHolder;
+}
+
+::-webkit-input-placeholder {
+    color: $placeHolder;
+}
+
+:focus::-moz-placeholder {
+    color: transparent;
+}
+
+:focus:-ms-input-placeholder {
+    color: transparent;
+}
+
+:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+input.text-input {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 52px;
+    padding: 0 20px;
+    margin: 0;
+    font-family: $mainFont;
+    font-size: 16px;
+    font-weight: 400;
+    color: $mainColor;
+    border: 2px solid $inputBorder;
+    background: $white;
+    outline: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+    &.error {
+        color: $red;
+        border-color: $red;
+    }
+    
+    &:focus {
+        border-color: $inputBorderFocus;
+    }
+    
+    //noinspection ALL
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+        transition: background-color 5000s ease-in-out 0s;
+        -webkit-text-fill-color: $mainColor !important;
+    }
+}
+
+textarea.textarea-field {
+    @extend input.text-input;
+    height: 85px;
+    padding: 15px 20px;
+    overflow: hidden;
+    resize: none;
+    
+    &_tall {
+        height: 126px;
+    }
+}
+
+.error-message {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    display: block;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: left;
+    color: $red;
+    white-space: nowrap;
+}
+
+.input-line {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-label {
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 300;
+}

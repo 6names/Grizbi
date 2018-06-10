@@ -1,0 +1,53 @@
+.cooperation {
+    position: relative;
+    z-index: 4;
+    text-align: center;
+    
+    &__inner {
+        @include inner;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        min-height: 600px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    
+    &__promo {
+        max-width: 624px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 63px;
+        font-size: 30px;
+        font-weight: 300;
+    }
+    
+    .section-title {
+        display: block;
+        margin-bottom: 20px;
+    }
+    
+    .main-butn {
+        width: 100%;
+        max-width: 644px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    @media only screen and (max-width: 768px) {
+    
+        &__inner {
+            min-height: 660px;
+        }
+    
+        &__promo {
+            margin-bottom: 20px;
+        }
+    
+        .main-butn {
+            max-width: 320px;
+        }
+    }
+}

@@ -1,0 +1,227 @@
+//mixins
+@mixin clear() {
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin hidden() {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0s;
+}
+
+@mixin visible() {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+@mixin inner($width: 1160px) {
+    position: relative;
+    max-width: $width;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    @media only screen and (max-width: 1024px) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+}
+
+@mixin section-scroll() {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% + 1000px);
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+@mixin section-scroll-content() {
+    position: relative;
+    width: calc(100% - 1000px);
+}
+
+@mixin accordionContent() {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.15s;
+}
+
+@mixin accordionContentActive() {
+    max-height: 3000px;
+    opacity: 1;
+    transition: max-height 0.8s, opacity 0.2s;
+}
+
+@mixin fullLink() {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    display: block;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    text-indent: -9999em;
+    overflow: hidden;
+}
+
+@mixin fullImage() {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        max-width: 99999%;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%);
+        background-size: cover;
+    }
+}
+
+@mixin sectionTitle {
+    margin-bottom: 29px;
+    font-size: 44px;
+    font-family: $secondFont;
+    line-height: 1.05em;
+    
+    @media only screen and (max-width: 1024px) {
+    
+    }
+    
+    @media only screen and (max-width: 680px) {
+    
+    }
+}
+
+@mixin pageTitle {
+    margin-bottom: 29px;
+    font-size: 44px;
+    font-family: $secondFont;
+    line-height: 1.05em;
+    
+    @media only screen and (max-width: 1024px) {
+    
+    }
+    
+    @media only screen and (max-width: 680px) {
+    
+    }
+}
+
+@mixin centeredButton() {
+    width: 100%;
+    margin-top: 25px;
+    text-align: center;
+    clear: both;
+    
+    [class*="butn"] {
+        display: inline-block;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    @media only screen and (max-width: 680px) {
+    
+    }
+}
+
+@mixin buttonHeight($height) {
+    height: $height;
+    border-radius: ceil($height / 2);
+}
+
+@mixin brush() {
+    &:before {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 50%;
+        z-index: 20;
+        display: block;
+        width: 2000px;
+        height: 165px;
+        //noinspection CssUnknownTarget
+        background: url('../images/ui/brush.png') no-repeat 0 0;
+        background-size: 100% 100%;
+        transform: translate3d(-50%, 50%, 0);
+    }
+}
+
+@mixin standardText() {
+    font-size: 17px;
+    line-height: 30px;
+}
+
+@mixin blackBlock() {
+    position: relative;
+    background: $black;
+    color: $white;
+    
+    svg {
+        fill: $white;
+    }
+}
+
+@mixin brushSmall() {
+    position: relative;
+    
+    &:before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        z-index: 20;
+        display: block;
+        width: 100%;
+        height: 58px;
+        //noinspection CssUnknownTarget
+        background: url('../images/ui/brush-small-top.png') no-repeat 0 0;
+        background-size: 100% 100%;
+        
+        .retina & {
+            //noinspection CssUnknownTarget
+            background-image: url('../images/ui/brush-small-top@2x.png');
+        }
+    }
+    
+    &:after {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 0;
+        z-index: 20;
+        display: block;
+        width: 100%;
+        height: 32px;
+        //noinspection CssUnknownTarget
+        background: url('../images/ui/brush-small-bottom.png') no-repeat 0 0;
+        background-size: 100% 100%;
+        
+        .retina & {
+            //noinspection CssUnknownTarget
+            background-image: url('../images/ui/brush-small-bottom@2x.png');
+        }
+    }
+}

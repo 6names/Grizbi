@@ -1,0 +1,132 @@
+.hero {
+    background: $black;
+    padding-top: 180px;
+    padding-bottom: 40px;
+    
+    &__inner {
+        @include inner(1385px);
+    }
+    
+    &__slide {
+        position: relative;
+        color: $white;
+    
+        &:before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            z-index: 1;
+            display: block;
+            width: 100%;
+            height: 100%;
+            //noinspection CssUnknownTarget
+            background: url('../images/slider-bg.jpg') no-repeat 50% 50%;
+            background-size: cover;
+        }
+        
+        svg {
+            fill: $white;
+        }
+        
+        
+        & > img {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            height: auto;
+        }
+        
+        & > a {
+            @include fullLink;
+        }
+        
+        &-holder {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 6%;
+            padding-right: 10px;
+            padding-bottom: 5.6%;
+            padding-left: 10px;
+        }
+        
+        &-image {
+            width: calc(33% - 10px);
+            max-width: 412px;
+        }
+        
+        &-content {
+            width: calc(30% - 10px);
+            max-width: 372px;
+            margin-left: 12%;
+        }
+        
+        &-discount {
+            width: 100%;
+            max-width: 305px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 12%;
+        }
+    
+        .main-butn {
+            width: 100%;
+            max-width: 372px;
+            margin-left: auto;
+            margin-right: auto;
+            min-width: 166px;
+        }
+    }
+    
+    @media only screen and (max-width: 1024px) {
+        padding-top: 80px;
+    }
+    
+    @media only screen and (max-width: 640px) {
+        
+        &__slide {
+            position: relative;
+            
+            &-image {
+                width: calc(40% - 10px);
+            }
+    
+            &-content {
+                width: calc(40% - 10px);
+                margin-left: 20px;
+                min-width: 166px;
+            }
+    
+            &-discount {
+                max-width: 79px;
+            }
+    
+            .main-butn {
+                font-size: 10px;
+                letter-spacing: normal;
+                
+                &:before {
+                    width: 1px;
+                }
+                
+                &:after {
+                    height: 1px;
+                }
+                
+                span {
+                    height: 28px;
+                    &:before {
+                        width: 1px;
+                    }
+    
+                    &:after {
+                        height: 1px;
+                    }
+                }
+            }
+        }
+    }
+}

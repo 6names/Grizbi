@@ -1,0 +1,117 @@
+.benefits {
+    position: relative;
+    z-index: 7;
+    counter-reset: benefit;
+    
+    &__inner {
+        @include inner;
+        padding-top: 183px;
+        padding-bottom: 37px;
+    }
+    
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        
+        &-image {
+            order: 2;
+            width: calc(50% - 15px);
+            @include brushSmall;
+            
+            img {
+                width: 100%;
+            }
+        }
+        
+        &-content {
+            order: 1;
+            width: calc(50% - 15px);
+            max-width: 535px;
+            
+            &:before {
+                display: block;
+                margin-top: 25px;
+                margin-bottom: 10px;
+                counter-increment: benefit;
+                content: counter(benefit);
+                font-family: $secondFont;
+                font-size: 60px;
+                line-height: 1em;
+            }
+            
+            p {
+                @include standardText;
+            }
+        }
+        
+        &-title {
+            margin-bottom: 12px;
+            font-family: $secondFont;
+            font-size: 30px;
+        }
+        
+        &_reverse {
+            .benefits__item-image {
+                order: 1;
+            }
+            
+            .benefits__item-content {
+                order: 2;
+            }
+        }
+        
+        &_wide {
+            display: block;
+            
+            .benefits__item-image {
+                width: 100%;
+            }
+            
+            .benefits__item-content {
+                width: 100%;
+            }
+        }
+    }
+    
+    &__author {
+        text-align: right;
+        max-width: 938px;
+        margin-top: 105px;
+        margin-left: auto;
+        margin-right: auto;
+        @include standardText;
+    }
+    
+    @media only screen and (max-width: 1024px) {
+        &__inner {
+            padding-top: 60px;
+            padding-bottom: 30px;
+        }
+    }
+    
+    @media only screen and (max-width: 768px) {
+        &__item {
+            display: block;
+            margin-bottom: 40px;
+        
+            &-image {
+                width: 100%;
+            }
+        
+            &-content {
+                order: 1;
+                width: 100%;
+                max-width: 100%;
+            
+                &:before {
+                    font-size: 40px;
+                }
+            }
+        }
+    
+        &__author {
+            margin-top: 40px;
+        }
+    }
+}

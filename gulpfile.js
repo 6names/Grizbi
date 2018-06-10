@@ -32,7 +32,7 @@ const paths = {
         },
         html: {
             clean: './src/*.html',
-            src: './src/html/*.html',
+            src: './src/*.html',
             dist: './src/'
         },
         svg: {
@@ -65,8 +65,7 @@ const paths = {
         css: './src/css/**/*.scss',
         js: ['./src/js/**/*.js', '!./src/js/main.js'],
         jsMain: './src/js/main.js',
-        html: './src/html/**/*.html',
-        htmlModals: './src/modals/**/*.html',
+        html: './src/**/*.html',
         svg: './src/images/svg/*.svg',
         images: './src/images/*'
     }
@@ -76,7 +75,7 @@ const paths = {
 
 // Static Server + Watching on SCSS, HTML, JS, IMAGES
 gulp.task('serve', function (fn) {
-    run('sass', 'scripts', 'svg', 'html', fn);
+    run('sass', 'scripts', 'svg', fn);
     browserSync.init({
         server: "./src/",
         notify: false
@@ -85,8 +84,7 @@ gulp.task('serve', function (fn) {
     gulp.watch(paths.watch.css, ['sass']).on('change', browserSync.reload);
     gulp.watch(paths.watch.js, ['scripts']);
     gulp.watch(paths.watch.jsMain).on('change', browserSync.reload);
-    gulp.watch(paths.watch.html, ['html']).on('change', browserSync.reload);
-    gulp.watch(paths.watch.htmlModals, ['html']).on('change', browserSync.reload);
+    gulp.watch(paths.watch.html).on('change', browserSync.reload);
     gulp.watch(paths.watch.svg, ['svg']).on('change', browserSync.reload);
     gulp.watch(paths.watch.images).on('change', browserSync.reload);
 });
@@ -125,26 +123,6 @@ gulp.task('sass', function () {
         ]))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(paths.dev.css.dist));
-});
-
-// HTML
-gulp.task('html-clean', function () {
-    return gulp.src(paths.dev.html.clean, {read: false})
-        .pipe(clean());
-});
-
-gulp.task('html-dev', function () {
-    return gulp.src(paths.dev.html.src)
-        .pipe(plumber())
-        .pipe(fileinclude({
-            prefix: '@@',
-            basepath: '@file'
-        }))
-        .pipe(gulp.dest(paths.dev.html.dist));
-});
-
-gulp.task('html', function (fn) {
-    run('html-clean', 'html-dev', fn);
 });
 
 // JS

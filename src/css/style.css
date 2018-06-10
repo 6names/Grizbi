@@ -757,7 +757,8 @@ a[class*="butn"]:hover {
         background: url("../images/ui/brush-small-top.png") no-repeat 0 0;
         background-size: 100% 100%; }
         .retina .benefits__item-image:before {
-          background-image: url("../images/ui/brush-small-top@2x.png"); }
+          background-image: url("../images/ui/brush-small-top@2x.png");
+          background-size: 100% 100%; }
       .benefits__item-image:after {
         position: absolute;
         content: '';
@@ -770,7 +771,8 @@ a[class*="butn"]:hover {
         background: url("../images/ui/brush-small-bottom.png") no-repeat 0 0;
         background-size: 100% 100%; }
         .retina .benefits__item-image:after {
-          background-image: url("../images/ui/brush-small-bottom@2x.png"); }
+          background-image: url("../images/ui/brush-small-bottom@2x.png");
+          background-size: 100% 100%; }
       .benefits__item-image img {
         width: 100%; }
     .benefits__item-content {

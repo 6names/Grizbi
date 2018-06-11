@@ -90,6 +90,10 @@
         &__slide {
             position: relative;
             
+            &-holder {
+                padding-bottom: 8%;
+            }
+            
             &-image {
                 width: calc(40% - 10px);
             }

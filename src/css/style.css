@@ -543,14 +543,14 @@ a[class*="butn"]:hover {
     position: absolute;
     content: '';
     bottom: 0;
-    left: 50%;
+    left: 0;
     z-index: 20;
     display: block;
-    width: 2000px;
+    width: 100%;
     height: 165px;
-    background: url("../images/ui/brush.png") no-repeat 0 0;
-    background-size: 100% 100%;
-    transform: translate3d(-50%, 50%, 0); }
+    background: url("../images/ui/brush.png") no-repeat 50% 0;
+    background-size: auto 100%;
+    transform: translate3d(0, 50%, 0); }
   .about svg {
     fill: #ffffff; }
   .about__inner {
@@ -604,14 +604,14 @@ a[class*="butn"]:hover {
     position: absolute;
     content: '';
     bottom: 0;
-    left: 50%;
+    left: 0;
     z-index: 20;
     display: block;
-    width: 2000px;
+    width: 100%;
     height: 165px;
-    background: url("../images/ui/brush.png") no-repeat 0 0;
-    background-size: 100% 100%;
-    transform: translate3d(-50%, 50%, 0); }
+    background: url("../images/ui/brush.png") no-repeat 50% 0;
+    background-size: auto 100%;
+    transform: translate3d(0, 50%, 0); }
   .production__inner {
     padding-top: 186px;
     padding-bottom: 120px;
@@ -660,14 +660,14 @@ a[class*="butn"]:hover {
     position: absolute;
     content: '';
     bottom: 0;
-    left: 50%;
+    left: 0;
     z-index: 20;
     display: block;
-    width: 2000px;
+    width: 100%;
     height: 165px;
-    background: url("../images/ui/brush.png") no-repeat 0 0;
-    background-size: 100% 100%;
-    transform: translate3d(-50%, 50%, 0); }
+    background: url("../images/ui/brush.png") no-repeat 50% 0;
+    background-size: auto 100%;
+    transform: translate3d(0, 50%, 0); }
   .for-partners svg {
     fill: #ffffff; }
   .for-partners__inner {
@@ -825,14 +825,14 @@ a[class*="butn"]:hover {
     position: absolute;
     content: '';
     bottom: 0;
-    left: 50%;
+    left: 0;
     z-index: 20;
     display: block;
-    width: 2000px;
+    width: 100%;
     height: 165px;
-    background: url("../images/ui/brush.png") no-repeat 0 0;
-    background-size: 100% 100%;
-    transform: translate3d(-50%, 50%, 0); }
+    background: url("../images/ui/brush.png") no-repeat 50% 0;
+    background-size: auto 100%;
+    transform: translate3d(0, 50%, 0); }
   .more__inner {
     position: relative;
     max-width: 1160px;
@@ -922,14 +922,14 @@ a[class*="butn"]:hover {
     position: absolute;
     content: '';
     bottom: 0;
-    left: 50%;
+    left: 0;
     z-index: 20;
     display: block;
-    width: 2000px;
+    width: 100%;
     height: 165px;
-    background: url("../images/ui/brush.png") no-repeat 0 0;
-    background-size: 100% 100%;
-    transform: translate3d(-50%, 50%, 0); }
+    background: url("../images/ui/brush.png") no-repeat 50% 0;
+    background-size: auto 100%;
+    transform: translate3d(0, 50%, 0); }
   .proposal svg {
     fill: #ffffff; }
   .proposal__inner {
@@ -1034,7 +1034,6 @@ a[class*="butn"]:hover {
   position: relative;
   z-index: 50;
   width: 100%;
-  overflow: hidden;
   position: relative;
   background: #000000;
   color: #ffffff;
@@ -1048,14 +1047,14 @@ a[class*="butn"]:hover {
     position: absolute;
     content: '';
     bottom: 0;
-    left: 50%;
+    left: 0;
     z-index: 20;
     display: block;
-    width: 2000px;
+    width: 100%;
     height: 165px;
-    background: url("../images/ui/brush.png") no-repeat 0 0;
-    background-size: 100% 100%;
-    transform: translate3d(-50%, 50%, 0); }
+    background: url("../images/ui/brush.png") no-repeat 50% 0;
+    background-size: auto 100%;
+    transform: translate3d(0, 50%, 0); }
   .footer:before {
     bottom: auto;
     top: -167px; }
@@ -1070,7 +1069,8 @@ a[class*="butn"]:hover {
     flex-direction: column;
     min-height: 811px;
     padding-top: 266px;
-    padding-bottom: 38px; }
+    padding-bottom: 38px;
+    overflow: hidden; }
   .footer__contacts {
     position: relative;
     z-index: 2;
@@ -1256,6 +1256,8 @@ a[class*="butn"]:hover {
       opacity: 1; }
     .tns-nav button:not(:first-child) {
       margin-left: 10px; }
+    .process .tns-nav button {
+      background-color: #000000; }
 
 .tns-controls {
   position: absolute;
@@ -1560,7 +1562,7 @@ a[class*="butn"]:hover {
     .cooperation .main-butn {
       max-width: 320px; }
     .tns-nav {
-      bottom: 5px; }
+      bottom: 10px; }
       .tns-nav button {
         width: 4px;
         height: 4px; }
@@ -1575,6 +1577,8 @@ a[class*="butn"]:hover {
         margin-right: 5px; }
     .hero__slide {
       position: relative; }
+      .hero__slide-holder {
+        padding-bottom: 8%; }
       .hero__slide-image {
         width: calc(40% - 10px); }
       .hero__slide-content {

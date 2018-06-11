@@ -2,7 +2,6 @@
     position: relative;
     z-index: 50;
     width: 100%;
-    overflow: hidden;
     @include blackBlock;
     //noinspection CssUnknownTarget
     background: $black url('../images/footer-bg.jpg') no-repeat 50% bottom;
@@ -27,6 +26,7 @@
         min-height: 811px;
         padding-top: 266px;
         padding-bottom: 38px;
+        overflow: hidden;
     }
     
     &__contacts {

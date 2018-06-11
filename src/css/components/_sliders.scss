@@ -155,10 +155,15 @@
         &:not(:first-child) {
             margin-left: 10px;
         }
+        
+        .process & {
+            background-color: $black;
+        }
     }
     
+    
     @media only screen and (max-width: 768px) {
-        bottom: 5px;
+        bottom: 10px;
     
         button {
             width: 4px;
